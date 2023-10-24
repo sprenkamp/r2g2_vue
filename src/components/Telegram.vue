@@ -325,7 +325,7 @@
           } else {
               try {
                   // const response = await axios.get('http://localhost:8000/aggregate/TelegramCount');
-                  const response = await axios.get('http://51.20.75.190:8000/aggregate/TelegramCount', 
+                  const response = await axios.get('https://51.20.75.190:8000/aggregate/TelegramCount', 
                     {withCredentials: true,
                   });
                   this.dataTele = response.data;
