@@ -325,7 +325,8 @@
           } else {
               try {
                   // const response = await axios.get('http://localhost:8000/aggregate/TelegramCount');
-                  const response = await axios.get('https://51.20.75.190:8000/aggregate/TelegramCount', 
+                  // const response = await axios.get('https://51.20.75.190:8000/aggregate/TelegramCount', 
+                  const response = await axios.get('https://elb-r2g2-802525093.eu-north-1.elb.amazonaws.com/aggregate/TelegramCount', 
                     {withCredentials: true,
                   });
                   this.dataTele = response.data;
