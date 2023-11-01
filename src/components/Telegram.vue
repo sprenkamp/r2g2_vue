@@ -326,7 +326,7 @@
               try {
                   // const response = await axios.get('http://localhost:8000/aggregate/TelegramCount');
                   // const response = await axios.get('http://51.20.75.190:8000/aggregate/TelegramCount', 
-                  // const response = await axios.get('https://elb-r2g2-802525093.eu-north-1.elb.amazonaws.com/aggregate/TelegramCount',
+                  // const response = await axios.get('https://New-load-balancer-653065979.eu-north-1.elb.amazonaws.com/aggregate/TelegramCount',
                   const response = await axios.get('https://db.governmentasaplatform.ch/aggregate/TelegramCount',
                     {withCredentials: true,
                   });
