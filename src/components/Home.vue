@@ -106,7 +106,7 @@
         trigger="hover"
         content="I'm a chatbot, try to ask me some questions.">
         <template #reference>
-          <el-button round @click="toggleChatbot">
+          <el-button round disabled @click="toggleChatbot">
             <Icon icon="material-symbols:robot-2-outline" width="56" height="56" :horizontalFlip="true" />
             <Icon icon="humbleicons:chat" width="36" height="36"/>
           </el-button>
