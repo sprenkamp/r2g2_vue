@@ -114,16 +114,35 @@ const sendMessage = async (message: string) => {
   //   query: "What are the biggest needs of refugees within the education sector?",
   //   chat_history: []
   // };
+  // try {
+  //   console.log('requestBody:', requestBody);
+  //   // const response = await axios.post('http://13.53.123.5:8080/query', requestBody);
+  //   const response = await axios.post('https://bot.governmentasaplatform.ch/query', requestBody);
+  //   messages.value.push({
+  //     from: 'chatGpt',
+  //     data: response.data[0],
+  //   });
+  // } catch (error) {
+  //   console.error(error);
+  // }
+
   try {
     console.log('requestBody:', requestBody);
-    const response = await axios.post('https://bot.governmentasaplatform.ch/query', requestBody,
-    {
-      withCredentials: true,
+    const response = await fetch('https://bot.governmentasaplatform.ch/query', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
     });
+    if (!response.ok) {
+      throw new Error(`Fetch request failed with status: ${response.status}`);
+    }
+    const responseData = await response.json();
     messages.value.push({
-      from: 'chatGpt',
-      data: response.data[0],
-    });
+        from: 'chatGpt',
+        data: responseData[0],
+      });
   } catch (error) {
     console.error(error);
   }
