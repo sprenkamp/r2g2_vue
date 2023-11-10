@@ -2,7 +2,7 @@
 
 <template>
     <el-menu class="el-menu flex-container" mode="horizontal" :ellipsis="false">
-        <el-menu-item index="0">LOGO</el-menu-item>
+        <!-- <el-menu-item index="0">LOGO</el-menu-item> -->
         <div class="flex-grow"/>
         <!-- <el-menu-item>
             <el-button color="FFFFFF" type="primary" class="button1">
@@ -10,7 +10,7 @@
             </el-button>
         </el-menu-item> -->
 
-        <router-link to="/" class="Home">
+        <!-- <router-link to="/" class="Home">
             <el-menu-item index="0.5">
                 <el-icon><house /></el-icon>
                 Home
@@ -22,7 +22,7 @@
                 <el-icon><list /></el-icon>
                 Telegram
             </el-menu-item>
-        </router-link>
+        </router-link> -->
 
         <!-- <router-link to="/Page3" class="Page3">
             <el-menu-item index="3">
