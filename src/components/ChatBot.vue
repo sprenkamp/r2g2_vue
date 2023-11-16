@@ -170,9 +170,9 @@ const sendQuestion = (question) => {
 };
 
 questions.value = [
-{ value: 'hello, how are you?' },
-{ value: 'Can I find a job in Switzerland as a nurse?' },
-{ value: 'Who is the president of USA?' },
+{ value: 'Hello, how are you?' },
+{ value: 'Hello, tell me something about the refugee.' },
+{ value: 'Hello, what are the problems of living in Switzerland?' },
 // { value: 'question template 2' },
 // { value: 'question template 3' },
 // { value: 'question template 4' },
