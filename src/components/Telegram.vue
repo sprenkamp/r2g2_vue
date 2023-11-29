@@ -259,25 +259,33 @@
       },
 
       async updateChartData() {
-          this.selectedCluster = this.selectedNews;
-          const ClustersData = {};
+        this.selectedCluster = this.selectedNews;
+        const ClustersData = {};
+        
+        if (this.selectedState === '') {
           for (const targetDate of this.dateOptions) {
-              const clusterCount = await this.$countedCluster_new(this.filteredData, targetDate, this.selectedCluster);
-              ClustersData[targetDate] = clusterCount;
+            const clusterCount = await this.$countedCluster_all(this.filteredData, targetDate, this.selectedCluster);
+            ClustersData[targetDate] = clusterCount;
           }
+        } else {
+          for (const targetDate of this.dateOptions) {
+            const clusterCount = await this.$countedCluster_new(this.filteredData, targetDate, this.selectedCluster);
+            ClustersData[targetDate] = clusterCount;
+          }
+        }
 
-          this.chartData = {
-              tension: 0.3,
-              labels: this.dateOptions,
-              datasets: this.newsOptions.map((option) => ({
-                tension: 0.3,
-                label: option.value,
-                data: this.dateOptions.map((date) => ClustersData[date][option.value] || 0),
-                borderWidth: 2,
-                fill: false,
-                pointStyle: false,
-              }))
-          };
+        this.chartData = {
+          tension: 0.3,
+          labels: this.dateOptions,
+          datasets: this.newsOptions.map((option) => ({
+            tension: 0.3,
+            label: option.value,
+            data: this.dateOptions.map((date) => ClustersData[date][option.value] || 0),
+            borderWidth: 2,
+            fill: false,
+            pointStyle: false,
+          }))
+        };
       },
 
       async updateCountryAndState() {
