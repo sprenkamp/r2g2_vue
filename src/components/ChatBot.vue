@@ -119,7 +119,8 @@ const sendMessage = async (message: string) => {
     const response = await axios.post('https://bot.governmentasaplatform.ch/query', requestBody);
     messages.value.push({
       from: 'chatGpt',
-      data: response.data[0],
+      // data: response.data[0],
+      data: response.data,
     });
   } catch (error) {
     console.error(error);
