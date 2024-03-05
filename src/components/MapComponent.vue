@@ -1,5 +1,5 @@
 <!-- MapComponent.vue -->
-
+<!--  -->
 <!-- <template>
   <div>
     <div>
@@ -202,7 +202,7 @@ export default {
     },
   },
 };
-</script> -->
+</script> --> 
 
 <template>
   <div>
