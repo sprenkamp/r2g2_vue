@@ -1,5 +1,5 @@
 <!-- MapComponent.vue -->
-<!--  -->
+
 <!-- <template>
   <div>
     <div>
