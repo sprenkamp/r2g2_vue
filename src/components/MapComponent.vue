@@ -122,7 +122,7 @@ export default {
   },
   async created() {
     this.isLoading = true;
-    const response = await fetch("https://github.com/sprenkamp/r2g2_vue/blob/main/src/components/MapComponent.vue")
+    const response = await fetch("https://github.com/sprenkamp/r2g2_vue/blob/main/src/data/germany_switzerland.geojson")
     const data = await response.json();
     this.geojson = data;
 
